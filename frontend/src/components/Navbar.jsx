@@ -1,30 +1,36 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   const navLinks = [
-    { to: "/", label: "Home" },
-    { to: "/about", label: "About Us" },
-    { to: "/off-plan", label: "Off Plan" },
-    { to: "/blog", label: "Blog" },
-    { to: "/contact", label: "Contact Us" },
+    { to: "/offer", label: "Offer" },
+    { to: "/case-study", label: "Case Study" },
+    { to: "/about", label: "About" },
+    { to: "/contact", label: "Contact" },
   ];
 
+  const toggleMenu = () => setMobileOpen(!mobileOpen);
+
   return (
-    <header className="w-full shadow-md fixed top-0 bg-white z-50">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <div className="text-2xl font-bold">Logo</div>
-        {/* desktop menu  */}
-        <nav className="hidden md:flex gap-6">
+    <div className="absolute top-[30px] left-0 w-full flex justify-center z-50">
+      <div className="bg-[#111954]/60 backdrop-blur-md backdrop-saturate-150 text-white w-full md:w-[90%] lg:w-[90%] px-8 py-4 rounded-full shadow-[0_0_20px_rgba(17,25,84,0.6)] flex items-center justify-between relative">
+        {/* Logo */}
+        <div className="text-2xl font-bold">
+          <span className="text-blue-400">BE</span>AGENCY
+        </div>
+
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex gap-8 text-sm font-medium">
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `text-gray-700 hover:text-blue-600 font-medium transition ${
-                  isActive ? "text-blue-600" : ""
+                `hover:text-blue-400 transition ${
+                  isActive ? "text-blue-400" : "text-white"
                 }`
               }
             >
@@ -32,44 +38,56 @@ const Navbar = () => {
             </NavLink>
           ))}
         </nav>
-        {/* mobile toggle menu  */}
-        <button
-          className="md:hidden text-gray-700"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-      {/* mobile slide menu */}
-      <div
-        className={`fixed top-0 right-0 h-full w-2/3 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        } md:hidden`}
-      >
-        <div className="p-5 flex flex-col gap-4 pt-20">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              className="text-gray-700 hover:text-blue-600 font-medium text-lg"
-              onClick={
-                () => setIsOpen(false) // close on click
-              }
-            >
-              {link.label}
-            </NavLink>
-          ))}
-        </div>
-      </div>
 
-      {/* overlay when menu opens  */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden"
-          onClick={() => setIsOpen(false)}
-        />
-      )}
-    </header>
+        {/* Desktop CTA Button */}
+        <div className="hidden md:block">
+          <NavLink
+            to="/contact"
+            className="bg-blue-500 hover:bg-blue-600 transition text-white px-5 py-2 rounded-full font-semibold text-sm"
+          >
+            Contact Us
+          </NavLink>
+        </div>
+
+        {/* Mobile Menu Icon */}
+        <div className="md:hidden">
+          <button onClick={toggleMenu}>
+            {mobileOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
+        </div>
+
+        {/* Mobile Dropdown Menu */}
+        {mobileOpen && (
+          <div className="absolute top-full left-0 mt-4 w-full bg-[#111954]/60 backdrop-blur-md backdrop-saturate-150 rounded-xl shadow-[0_0_20px_rgba(17,25,84,0.6)] py-6 px-8 flex flex-col gap-4 z-50 md:hidden">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={({ isActive }) =>
+                  `text-white hover:text-blue-400 transition ${
+                    isActive ? "text-blue-400" : "text-white"
+                  }`
+                }
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </NavLink>
+            ))}
+            <NavLink
+              to="/contact"
+              className="mt-2 bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-full font-semibold text-sm text-center"
+              onClick={() => setMobileOpen(false)}
+            >
+              Contact Us
+            </NavLink>
+          </div>
+        )}
+      </div>
+    </div>
   );
 };
 
