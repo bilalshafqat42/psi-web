@@ -9,7 +9,7 @@ const Navbar = () => {
     { to: "/about-us", label: "About us" },
     { to: "/off-plan", label: "Off Plan" },
     { to: "/blog", label: "Blog" },
-    { to: "/contact", label: "Contact" },
+    // { to: "/contact", label: "Contact" },
   ];
 
   const toggleMenu = () => setMobileOpen(!mobileOpen);
