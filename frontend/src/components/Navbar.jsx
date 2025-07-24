@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <div className="absolute top-[30px] left-0 w-full flex justify-center z-50">
-      <div className="bg-[#111954]/60 backdrop-blur-md backdrop-saturate-150 text-white w-full md:w-[90%] lg:w-[90%] px-8 py-4 rounded-full shadow-[0_0_20px_rgba(17,25,84,0.6)] flex items-center justify-between relative">
+      <div className="max-w-7xl w-full mx-auto bg-[#111954]/60 backdrop-blur-md backdrop-saturate-150 text-white px-8 py-4 rounded-full shadow-[0_0_20px_rgba(17,25,84,0.6)] flex items-center justify-between relative">
         {/* Logo */}
         <div className="text-2xl font-bold">
           <span className="text-blue-400">BE</span>AGENCY
