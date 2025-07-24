@@ -6,9 +6,9 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navLinks = [
-    { to: "/offer", label: "Offer" },
-    { to: "/case-study", label: "Case Study" },
-    { to: "/about", label: "About" },
+    { to: "/about-us", label: "About us" },
+    { to: "/off-plan", label: "Off Plan" },
+    { to: "/blog", label: "Blog" },
     { to: "/contact", label: "Contact" },
   ];
 
@@ -19,11 +19,11 @@ const Navbar = () => {
       <div className="max-w-7xl w-full mx-auto bg-[#111954]/60 backdrop-blur-md backdrop-saturate-150 text-white px-8 py-4 rounded-full shadow-[0_0_20px_rgba(17,25,84,0.6)] flex items-center justify-between relative">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <span className="text-blue-400">BE</span>AGENCY
+          <span className="text-blue-400">Bilal</span> PSI
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex gap-8 text-sm font-medium">
+        <nav className="hidden md:flex gap-8 font-medium text-base uppercase">
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
