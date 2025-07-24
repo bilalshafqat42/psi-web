@@ -4,11 +4,14 @@ const HeroSection = () => {
       className="relative bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/images/main-bg.jpg')" }}
     >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black opacity-30 z-0" />
+
       {/* CONTAINERIZED CONTENT */}
-      <div className="max-w-7xl mx-auto px-6 py-40">
-        <div className="bg-black/50 backdrop-blur-sm rounded-xl px-6 py-20 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-40">
+        <div className="px-6 py-20 text-center">
           {/* Heading */}
-          <h1 className="text-white text-5xl md:text-6xl font-extrabold leading-tight mb-4">
+          <h1 className="text-white text-5xl md:text-4xl font-extrabold leading-tight mb-4">
             Discover Modern Living in the Heart of the City
           </h1>
 
