@@ -8,7 +8,7 @@ import {
   UserCircle2,
 } from "lucide-react";
 
-import { FaWhatsapp, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import { LiaPhoneAltSolid } from "react-icons/lia";
 import { TfiEmail } from "react-icons/tfi";
 

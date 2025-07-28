@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <Navbar />
       <Hero />
-      <SearchForm />
+      {/* <SearchForm /> */}
       <PropertySlider />
     </>
   );

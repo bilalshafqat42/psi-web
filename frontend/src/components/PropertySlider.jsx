@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
@@ -9,39 +9,12 @@ import properties from "../db/properties";
 import PropertyCard from "./PropertyCard";
 
 const PropertySlider = () => {
-  const [type, setType] = useState("rent");
-
   return (
     <section className="py-6 px-4 relative">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-[#01062d] mb-8 text-left border-[#faa300] border-l-4 pl-4">
           LATEST PROPERTIES
         </h2>
-
-        {/* Toggle Rent/Buy */}
-        <div className="relative flex bg-gray-200 rounded w-80 h-10 cursor-pointer mb-8">
-          <div
-            className={`absolute top-0 h-full w-1/2 bg-[#faa300] rounded transition-all duration-300 ${
-              type === "buy" ? "left-1/2" : "left-0"
-            }`}
-          ></div>
-          <div
-            className="flex-1 flex items-center justify-center z-10 text-sm font-medium"
-            onClick={() => setType("rent")}
-          >
-            <span className={type === "rent" ? "text-white" : "text-[#01062d]"}>
-              FOR SALE
-            </span>
-          </div>
-          <div
-            className="flex-1 flex items-center justify-center z-10 text-sm font-medium"
-            onClick={() => setType("buy")}
-          >
-            <span className={type === "buy" ? "text-white" : "text-[#01062d]"}>
-              FOR RENT
-            </span>
-          </div>
-        </div>
 
         {/* Swiper */}
         <div className="relative">
