@@ -31,6 +31,7 @@ const HeroSection = () => {
             </button>
           </div>
         </div>
+        {/* search Form Section */}
       </div>
     </section>
   );
