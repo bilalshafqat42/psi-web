@@ -5,15 +5,16 @@ import {
   Ruler,
   Heart,
   MapPin,
-  MessageCircle,
-  Phone,
-  Mail,
   UserCircle2,
 } from "lucide-react";
 
+import { FaWhatsapp, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { LiaPhoneAltSolid } from "react-icons/lia";
+import { TfiEmail } from "react-icons/tfi";
+
+
 const PropertyCard = ({ property }) => {
   return (
-    // In PropertyCard.jsx
     <div className="h-full flex flex-col bg-white border border-[#d2d2d2] rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all">
       <div className="relative">
         {/* Property Image */}
@@ -44,33 +45,33 @@ const PropertyCard = ({ property }) => {
 
       <div className="p-4">
         {/* Heading */}
-        <h2 className="text-[#01062d] text-lg font-semibold mb-1 uppercase">
+        <h2 className="text-[#01062d] text-base font-semibold mb-1 uppercase">
           {property.propertyName}
         </h2>
 
         {/* Location */}
-        <div className="flex items-center text-[#7e7b7b] text-base mb-3 font-medium">
+        <div className="flex items-center text-[#7e7b7b] text-sm mb-3 font-medium">
           <MapPin className="mr-1 text-[#faa300] w-4 h-4" />
           {property.propertyLocation}
         </div>
 
         {/* Bed | Bath | Size */}
         <div className="grid grid-cols-3 text-base font-semibold text-[#01062d] mb-4">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center text-xs gap-2">
             <BedDouble className="text-[#faa300] w-4 h-4" />
             {property.propertyBed} Bed
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center text-xs gap-2">
             <Bath className="text-[#faa300] w-4 h-4" />
             {property.propertyBath} Bath
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center text-xs gap-2">
             <Ruler className="text-[#faa300] w-4 h-4" />
             {property.propertySize}
           </div>
         </div>
 
-        {/* Buttons */}
+        {/* Buttons - React Icons here */}
         <div className="grid grid-cols-3 gap-2 mb-4">
           <a
             href={property.whatsappButton}
@@ -78,19 +79,22 @@ const PropertyCard = ({ property }) => {
             rel="noopener noreferrer"
             className="flex justify-center items-center gap-1 bg-white border border-[#01062d] text-[#01062d] px-2 py-1 rounded text-lg h-8"
           >
-            <MessageCircle className="w-4 h-4" />
+            <FaWhatsapp className="w-4 h-4" />
+            <span className="text-xs">Whatsapp</span>
           </a>
           <a
             href={property.callButton}
             className="flex justify-center items-center gap-1 bg-white border border-[#01062d] text-[#01062d] font-medium px-2 py-1 rounded text-base h-8"
           >
-            <Phone className="w-4 h-4" />
+            <LiaPhoneAltSolid className="w-4 h-4" />
+            <span className="text-xs">Call Us</span>
           </a>
           <a
             href={property.emailButton}
             className="flex justify-center items-center gap-1 bg-white border border-[#01062d] text-[#01062d] font-medium px-2 py-1 rounded text-base h-8"
           >
-            <Mail className="w-4 h-4" />
+            <TfiEmail className="w-4 h-4" />
+            <span className="text-xs">Email Us</span>
           </a>
         </div>
 
