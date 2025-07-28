@@ -12,10 +12,9 @@ import { FaWhatsapp, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { LiaPhoneAltSolid } from "react-icons/lia";
 import { TfiEmail } from "react-icons/tfi";
 
-
 const PropertyCard = ({ property }) => {
   return (
-    <div className="h-full flex flex-col bg-white border border-[#d2d2d2] rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all">
+    <div className="h-full flex flex-col bg-white border border-[#e6e6e6] rounded-xl overflow-hidden hover:shadow-lg transition-all">
       <div className="relative">
         {/* Property Image */}
         <img
@@ -77,23 +76,23 @@ const PropertyCard = ({ property }) => {
             href={property.whatsappButton}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex justify-center items-center gap-1 bg-white border border-[#01062d] text-[#01062d] px-2 py-1 rounded text-lg h-8"
+            className="flex justify-center items-center gap-1 bg-[#f6f6f6] border border-[#f6f6f6] text-[#01062d] font-medium px-2 py-1 rounded text-base h-[40px]"
           >
-            <FaWhatsapp className="w-4 h-4" />
-            <span className="text-xs">Whatsapp</span>
+            <FaWhatsapp className="text-[#1B8755] w-4 h-4" />
+            <span className="text-xs text-[#000]">Whatsapp</span>
           </a>
           <a
             href={property.callButton}
-            className="flex justify-center items-center gap-1 bg-white border border-[#01062d] text-[#01062d] font-medium px-2 py-1 rounded text-base h-8"
+            className="flex justify-center items-center gap-1 bg-[#f6f6f6] border border-[#f6f6f6] text-[#01062d] font-medium px-2 py-1 rounded text-base  h-[40px]"
           >
-            <LiaPhoneAltSolid className="w-4 h-4" />
+            <LiaPhoneAltSolid className="text-[#faa300] w-4 h-4 -rotate-90" />
             <span className="text-xs">Call Us</span>
           </a>
           <a
             href={property.emailButton}
-            className="flex justify-center items-center gap-1 bg-white border border-[#01062d] text-[#01062d] font-medium px-2 py-1 rounded text-base h-8"
+            className="flex justify-center items-center gap-1 bg-[#f6f6f6] border border-[#f6f6f6] text-[#01062d] font-medium px-2 py-1 rounded text-base  h-[40px]"
           >
-            <TfiEmail className="w-4 h-4" />
+            <TfiEmail className="text-[#EA4335] w-4 h-4" />
             <span className="text-xs">Email Us</span>
           </a>
         </div>
@@ -117,7 +116,7 @@ const PropertyCard = ({ property }) => {
           </div>
           <a
             href={property.propertyDetailsButton}
-            className="rounded-full text-base text-[#faa300] bg-white border border-[#faa300] hover:bg-[#faa300] hover:text-white px-3 py-1"
+            className="rounded-full text-sm text-[#faa300] bg-white border border-[#faa300] hover:bg-[#faa300] hover:text-white px-5 py-2"
           >
             Details
           </a>
