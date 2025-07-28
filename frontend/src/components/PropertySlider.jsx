@@ -57,7 +57,6 @@ const PropertySlider = () => {
               />
             </svg>
           </button>
-
           <button className="custom-swiper-button-next absolute top-1/2 -right-[60px] transform -translate-y-1/2 w-9 h-9 bg-white border border-gray-300 rounded-full shadow hover:bg-gray-100 transition z-10 flex items-center justify-center">
             <svg
               className="w-4 h-4 text-gray-600"
