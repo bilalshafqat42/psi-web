@@ -47,6 +47,7 @@ const PropertySlider = () => {
         <div className="relative">
           <Swiper
             modules={[Navigation]}
+            loop={true}
             navigation={{
               nextEl: ".custom-swiper-button-next",
               prevEl: ".custom-swiper-button-prev",
@@ -54,14 +55,14 @@ const PropertySlider = () => {
             spaceBetween={20}
             slidesPerView={1}
             breakpoints={{
-              640: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-              1280: { slidesPerView: 3 },
+              640: { slidesPerView: 1.2 },
+              768: { slidesPerView: 2.2 },
+              1024: { slidesPerView: 3.5 }, // Show 3 full + 1 half
             }}
+            className="h-full"
           >
             {properties.map((property, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} className="h-full">
                 <PropertyCard property={property} />
               </SwiperSlide>
             ))}

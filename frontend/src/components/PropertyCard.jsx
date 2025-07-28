@@ -13,7 +13,8 @@ import {
 
 const PropertyCard = ({ property }) => {
   return (
-    <div className="bg-white border border-[#d2d2d2] rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all">
+    // In PropertyCard.jsx
+    <div className="h-full flex flex-col bg-white border border-[#d2d2d2] rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all">
       <div className="relative">
         {/* Property Image */}
         <img
