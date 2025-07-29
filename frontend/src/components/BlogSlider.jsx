@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -19,8 +19,12 @@ const BlogSlider = () => {
         <div className="relative px-0 md:pr-0">
           {/* Add pr-8 to allow half card on mobile */}
           <Swiper
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             loop={true}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
             navigation={{
               nextEl: ".blog-swiper-button-next",
               prevEl: ".blog-swiper-button-prev",

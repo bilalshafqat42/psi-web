@@ -23,7 +23,7 @@ const PropertySlider = () => {
             modules={[Navigation, Autoplay]}
             loop={true}
             autoplay={{
-              delay: 4000,
+              delay: 5000,
               disableOnInteraction: false,
             }}
             navigation={{
