@@ -11,7 +11,7 @@ import PropertyCard from "./PropertyCard";
 
 const PropertySlider = () => {
   return (
-    <section className="py-6 pl-4 pr-0relative">
+    <section className="py-6 pl-4 pr-0 relative">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-[#01062d] mb-8 text-left border-[#faa300] border-l-4 pl-4">
           LATEST PROPERTIES

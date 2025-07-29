@@ -16,7 +16,7 @@ const BlogSlider = () => {
           LATEST BLOGS
         </h2>
         {/* Swiper */}
-        <div className="relative px-0 md:pr-0">
+        <div className="relative pl-0 pr-0 md:pr-0">
           {/* Add pr-8 to allow half card on mobile */}
           <Swiper
             modules={[Navigation, Autoplay]}
