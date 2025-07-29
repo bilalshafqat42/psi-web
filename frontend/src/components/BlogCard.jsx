@@ -1,5 +1,5 @@
 import React from "react";
-import { Heart, CalendarDays, UserCircle2 } from "lucide-react";
+import { CalendarDays, UserCircle2 } from "lucide-react";
 
 const BlogCard = ({ blog }) => {
   return (
@@ -21,12 +21,12 @@ const BlogCard = ({ blog }) => {
         </span>
 
         {/* Like button */}
-        <button
+        {/* <button
           onClick={() => console.log(`Liked blog ${blog.blogId}`)}
           className="absolute top-3 right-3 bg-[#01062d] p-1 rounded-full shadow hover:bg-red-100 transition"
         >
           <Heart className="text-[#faa300] w-4 h-4" />
-        </button>
+        </button> */}
       </div>
 
       {/* Content */}

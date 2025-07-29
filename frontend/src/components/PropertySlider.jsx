@@ -34,6 +34,7 @@ const PropertySlider = () => {
             slidesPerView={1.2}
             centeredSlides={false}
             initialSlide={0}
+            grabCursor={true}
             breakpoints={{
               640: { slidesPerView: 1.2 }, // Show 1 + a bit on mobile
               768: { slidesPerView: 2.2 },

@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import PropertySlider from "../components/PropertySlider";
 import BlogSlider from "../components/BlogSlider";
-import StatesCard from "../components/StatesCard";
+import StateSlider from "../components/StateSlider";
 
 import { Lightbulb, Workflow, Headphones, CheckCircle } from "lucide-react";
 
@@ -74,7 +74,11 @@ const Home = () => {
         </div>
       </section>
       <PropertySlider />
-      <StatesCard />
+      <section className="bg-white py-20 px-4 md:px-8 lg:px-16">
+        <div className="max-w-7xl mx-auto gap-16 items-start">
+          <StateSlider />
+        </div>
+      </section>
       <BlogSlider />
     </>
   );
