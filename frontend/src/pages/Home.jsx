@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import PropertySlider from "../components/PropertySlider";
 import BlogSlider from "../components/BlogSlider";
+import StatesCard from "../components/StatesCard";
 
 import { Lightbulb, Workflow, Headphones, CheckCircle } from "lucide-react";
 
@@ -73,7 +74,7 @@ const Home = () => {
         </div>
       </section>
       <PropertySlider />
-
+      <StatesCard />
       <BlogSlider />
     </>
   );
