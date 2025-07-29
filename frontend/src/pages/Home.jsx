@@ -2,8 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import PropertySlider from "../components/PropertySlider";
-import BlogCard from "../components/BlogCard";
-import dummyBlogs from "../db/blog";
+import BlogSlider from "../components/BlogSlider";
 
 import { Lightbulb, Workflow, Headphones, CheckCircle } from "lucide-react";
 
@@ -74,16 +73,8 @@ const Home = () => {
         </div>
       </section>
       <PropertySlider />
-      <section className="py-12 max-w-7xl mx-auto">
-        <h2 className="text-2xl font-bold mb-8 text-[#01062d]">
-          Latest Blog Posts
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {dummyBlogs.map((blog) => (
-            <BlogCard key={blog.blogId} blog={blog} />
-          ))}
-        </div>
-      </section>
+
+      <BlogSlider />
     </>
   );
 };
