@@ -60,7 +60,7 @@ const BlogCard = ({ blog }) => {
         <p className="text-sm text-[#333] mb-6 flex-grow">{blog.excerpt}</p>
 
         {/* Read More */}
-        <div className="flex justify-end">
+        <div className="flex justify-start">
           <a
             href={blog.readMoreLink}
             className="rounded-full text-sm text-[#faa300] bg-white border border-[#faa300] hover:bg-[#faa300] hover:text-white px-5 py-2"
