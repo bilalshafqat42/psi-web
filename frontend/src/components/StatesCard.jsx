@@ -1,15 +1,25 @@
 import React from "react";
 
-const StateCard = ({ name, numberOfProperties, image }) => {
+const StatesCard = ({ image, category, title, author, date, readTime }) => {
   return (
-    <div className="min-w-[280px] h-[440px] sm:min-w-[320px] max-w-sm bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-      <img src={image} alt={name} className="h-66 w-full object-cover" />
-      <div className="p-4 h-[40px]">
-        <h3 className="text-lg font-semibold text-gray-800">{name}</h3>
-        <p className="text-sm text-gray-500">{numberOfProperties} Properties</p>
+    <div className="w-full h-full bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105">
+      <img src={image} alt={title} className="w-full h-60 object-cover" />
+      <div className="p-5">
+        <p className="text-xs uppercase font-semibold text-gray-500 mb-2">
+          {category}
+        </p>
+        <h2 className="text-lg font-bold leading-tight text-gray-900 mb-3 line-clamp-2">
+          {title}
+        </h2>
+        <div className="text-sm text-gray-600 flex items-center justify-between">
+          <span>{author}</span>
+          <span>
+            {date} | {readTime}
+          </span>
+        </div>
       </div>
     </div>
   );
 };
 
-export default StateCard;
+export default StatesCard;

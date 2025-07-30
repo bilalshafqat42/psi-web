@@ -2,3 +2,10 @@
   /* padding-top: 100px; */
   background-image: url("../public/images/main-bg.jpg");
 }
+
+.swiper-slide {
+  transition: transform 0.3s ease;
+}
+.swiper-slide-active .swiper-slide-scale {
+  transform: scale(1.15);
+}
